@@ -6,19 +6,16 @@ Implementation of twitter thrift for thriftpy
 
 from __future__ import absolute_import
 
-import os.path
 import warnings
 from random import Random
-
-random = Random()
-
-from thriftpy.contrib.twitter_thrift.context import broadcast
-
-from thriftpy.protocol import TBinaryProtocolFactory
-from thriftpy.transport import TSocket, TSSLSocket, TFramedTransportFactory
+from pkg_resources import resource_stream
+from ...contrib.twitter_thrift.context import broadcast
+from ...protocol import TBinaryProtocolFactory
+from ...transport import TSocket, TSSLSocket, TFramedTransportFactory
 from ...thrift import TClient, TApplicationException, TMessageType, TType
 from ...parser import load_fp
-from pkg_resources import resource_stream
+
+random = Random()
 
 # From:
 # https://github.com/twitter/finagle/blob/master/finagle-thrift/src/main/scala/com/twitter/finagle/thrift/ThriftTracing.scala
