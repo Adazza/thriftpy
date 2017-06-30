@@ -20,7 +20,7 @@ random = Random()
 # From:
 # https://github.com/twitter/finagle/blob/master/finagle-thrift/src/main/scala/com/twitter/finagle/thrift/ThriftTracing.scala
 trace_method = "__can__finagle__trace__v3__"
-trace_thrift_stream = resource_stream('thriftpy', 'thriftpy/contrib/twitter_thrift/tracing.thrift')
+trace_thrift_stream = resource_stream('thriftpy', 'contrib/twitter_thrift/tracing.thrift')
 trace_thrift = load_fp(trace_thrift_stream, 'trace_thrift')
 
 __all__ = ["TwitterTClient"]
